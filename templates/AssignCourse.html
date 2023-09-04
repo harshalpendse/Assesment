@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="pd-8 mt-80">
+<center>
+    <h1 class="m-8 font-sans text-5xl">Assign Course</h1>
+
+    <form method="POST" action="/AssignCourse.html">
+        <label class="p-4" for="course_name">Select a Course:</label>
+        <select class="rounded-full border-2 p-4 border-black" name="course_name" id="course_name">
+            {% for course in courses %}
+                <option value="{{ course.course_name }}">{{ course.course_name }}</option>
+            {% endfor %}
+        </select>
+     
+        <label class="p-4"for="Names">Select a Teacher:</label>
+        <select class="rounded-full border-2 p-4 border-black" name="Names" id="Names">
+            {% for name in Names %}
+                <option value="{{ name.username }}">{{ name.username }}</option>
+            {% endfor %}
+        </select>
+    
+        <label class="p-4" for="date">Select a Date:</label>
+        <input  class="rounded-full border-2 p-4 border-black" type="date" name="date" id="date">
+       
+        <input class="rounded-full border-2 p-4 s border-black" type="submit" value="Submit">
+        
+    </form>
+    
+    
+</center>
+    </div>
+</body>
+</html>

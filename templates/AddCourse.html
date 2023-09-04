@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body >
+
+    <div class="pd-8 mt-80">
+<center>
+    <h1 class="m-8 font-sans text-5xl">Add Course</h1>
+
+    <form action="/AddCourse.html" method="POST"> 
+        <input class="rounded-full border-2 p-4 border-black" type="text" name="course_name" placeholder="Add new Course name">
+        <input class="rounded-full border-2 p-4 border-black" type="text" name="course_batch" placeholder="Add number of batches">
+        <input class="rounded-full border-2 p-4 border-black" type="text" name="course_description" placeholder="Add new Course Description">
+
+        <select class="rounded-full border-2 p-4 border-black" name="course_level">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <input class=" rounded-full border-2 border-black p-4" type="submit" value="Submit">
+    </form>
+</center>
+</div>
+</body>
+</html>

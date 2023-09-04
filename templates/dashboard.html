@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Dashboard</title>
+</head>
+<body>
+<div class="pd-6 mt-60">
+    <center>
+    <h1 class="m-8 font-sans text-5xl">Welcome, {{ current_user.username }}!</h1>
+
+    <h2 class="m-8 font-sans text-2xl">Your Assigned Lectures:</h2>
+    <table  class="rounded-full border-2 p-4 border-black">
+        <tr class="rounded-full border-2 p-4 border-black">
+            <th class="p-4">Date</th>
+            <th class="p-4">Course Name</th>
+        </tr >
+        {% for lecture in lectures %}
+        <tr class="rounded-full border-2 p-4 border-black">
+            <td class="p-4">{{ lecture.date }}</td>
+            <td class="p-4">{{ lecture.course_name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="p-8">
+    <a class="rounded-full border-2 p-2  border-black" href="{{ url_for('logout') }}">Logout</a>
+</div>
+</center>
+</div>
+</body>
+</html>
